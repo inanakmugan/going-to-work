@@ -9,8 +9,7 @@ public class PlayerScore : MonoBehaviour
     [SerializeField] float pointIncreasedPerSecond = 1f;
 
     private string scoreTag = "Score";
-    private string highScoreTag = "HighScore";
-
+   
     public int scoreInt;
 
     private void Update()

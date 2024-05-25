@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
@@ -28,6 +29,8 @@ public class Player : MonoBehaviour
     private Vector3 jumpInput;
     private float moveSpeed;
     AudioSource audioSource;
+
+    //Vector2 slowInput; For Android controls
 
 
     void Start()
@@ -125,4 +128,19 @@ public class Player : MonoBehaviour
         moveSpeed = normalSpeed;
         playerAnimator.speed = 1;
     }
+
+    //this two functions are for new input system for android release
+    /*void OnJump()
+    {
+        if (jumpCount > 0)
+        {
+            Jump();
+        }
+    }
+
+    void OnSlow(InputValue value)
+    {
+        slowInput = value.Get<Vector2>();
+        Debug.Log(slowInput.ToString());
+    }*/
 }

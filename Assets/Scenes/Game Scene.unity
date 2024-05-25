@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.3849836, g: 0.4272679, b: 0.4978779, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -471,7 +470,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &440218813
 RectTransform:
   m_ObjectHideFlags: 0
@@ -724,13 +723,14 @@ GameObject:
   - component: {fileID: 684308411}
   - component: {fileID: 684308410}
   - component: {fileID: 684308409}
+  - component: {fileID: 684308412}
   m_Layer: 5
   m_Name: JumpButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &684308408
 RectTransform:
   m_ObjectHideFlags: 0
@@ -845,6 +845,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 684308407}
   m_CullTransparentMesh: 1
+--- !u!114 &684308412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684308407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ControlPath: <Touchscreen>/Press
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1815,7 +1828,7 @@ MonoBehaviour:
   enviromentLength: 125
   spawnOffset: 5
   playerTransform: {fileID: 1696455049}
-  spawnRotation: {x: 0, y: -0.70710677, z: 0, w: 0.70710677}
+  spawnRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   spawnPosition: {x: 0, y: 1, z: -8.87}
 --- !u!1 &1696455045
 GameObject:
@@ -1833,6 +1846,7 @@ GameObject:
   - component: {fileID: 1696455053}
   - component: {fileID: 1696455056}
   - component: {fileID: 1696455057}
+  - component: {fileID: 1696455058}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1877,7 +1891,7 @@ MonoBehaviour:
   maxJumpCount: 2
   jumpCount: 0
   AnimHeightLimit: 2.85
-  jumpSFX: {fileID: 8300000, guid: cf98135f6bbd042c8aea8564a070ce18, type: 3}
+  jumpSFX: {fileID: 8300000, guid: 881e3f52c86c94f26a60718d35627cd8, type: 3}
   boxSize: {x: 1, y: 0.35, z: 1}
   maxDistance: 1.45
   layerMask:
@@ -1923,7 +1937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthDisplay: {fileID: 264410737}
-  audioClip: {fileID: 8300000, guid: 1ea065a7e57344f2f8ac1aaf77349c5e, type: 3}
+  audioClip: {fileID: 8300000, guid: cf6c0e7fbef9449c98a0cdb5ea0c4d9f, type: 3}
 --- !u!136 &1696455054
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1957,7 +1971,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: cf98135f6bbd042c8aea8564a070ce18, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2074,6 +2088,36 @@ MonoBehaviour:
   scoreText: {fileID: 1208854729}
   pointIncreasedPerSecond: 1
   scoreInt: 0
+--- !u!114 &1696455058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696455045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 94fd0e4f56e76406586280e719d3bdc1, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1875591002
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,7 +7,6 @@ public class BackgroundManager : MonoBehaviour
     [SerializeField] float spawnOffset = 5f;
     [SerializeField] Transform playerTransform;
 
-    //[SerializeField] float destroyOffset = -10f;
     [SerializeField] Quaternion spawnRotation = Quaternion.Euler(0, -90, 0);
 
     [SerializeField] Vector3 spawnPosition;
