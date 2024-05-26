@@ -1891,7 +1891,7 @@ MonoBehaviour:
   maxJumpCount: 2
   jumpCount: 0
   AnimHeightLimit: 2.85
-  jumpSFX: {fileID: 8300000, guid: 881e3f52c86c94f26a60718d35627cd8, type: 3}
+  jumpSFX: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
   boxSize: {x: 1, y: 0.35, z: 1}
   maxDistance: 1.45
   layerMask:
